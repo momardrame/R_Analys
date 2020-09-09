@@ -1,0 +1,90 @@
+MechaCar Report
+AutosRUs’ newest prototype, the MechaCar, is suffering from production troubles. 
+There are a number of issues surrounding the vehicle’s specifications and manufacturing process that are blocking the manufacturing 
+team from proceeding. AutosRUs’ upper management has called on Jeremy and the data analytics team to help analyze the production data 
+in order to justify some last-minute design decisions. With Jeremy’s help, the launch of the MechaCar should be one of the most successful 
+product launches in the company’s history.
+
+Datasets
+To perform our task, we are going to perform a statistical analysis using R, RStudio and we are also going to use the manufacturing datasets provided
+
+MechaCar-MPG.csv. 
+We tested 50 potential prototype MechaCars. The prototypes produced using design specifications which identified performance of the vehicles. 
+Key Metrics obtained:
+- Vehicle, weight
+- Length of the vehicle
+- Drivetrain
+- Ground clearance
+
+Suspension_coil.csv
+MechaCars suspension coil test results from different production lots. 
+Key Metrics obtained:
+- Weight capacity of suspension coils
+- Manufacturing process consistency 
+
+Multiple Regression
+We used multiple to obtain a linear model to predict the mpg for the MechaCar prototype
+
+Observations:
+Which variables/coefficients provided a non-random amount of variance to the mpg values in the dataset?
+- Ground Clearance
+- Vehicle Height
+- Vehicle Length
+- Spoiler Angle
+
+Observations:
+Is the slope of the linear model considered to be zero? Why or why not?
+All wheel drive (AWD) the linear model was a flat line with a slope of 0.
+
+Observations:
+Does this linear model predict mpg of MechaCar prototypes effectively? Why or why not?
+This linear model does not predict mpg of MechaCar prototypes. This was found after we reviewed our statistical test results
+Suspension Coil Summary
+In our file, we create a summary statistics table for the suspension coil’s pounds-per-inch continuous variable. The following metrics were included
+- Mean
+- Median
+- Variance Standard deviation
+The specifications for the MechaCar suspension coils indicated that the suspension variance should not exceed 100 pounds per square inch
+Summary_Statistics_Table <- MechaCar_Suspension_Table %>% group_by(PSI) %>% summarize(Mean= mean(MechaCar_Suspension_Table$PSI),
+Median= median(MechaCar_Suspension_Table$PSI), Variance= var(MechaCar_Suspension_Table$PSI), Standard_Deviation= sd(MechaCar_Suspension_Table$PSI))
+
+View(Summary_Statistics_Table)
+Our results showed that the current manufacturing data meets this design specification with a variance of 62.3
+
+Suspension Coil t-test
+We determined that suspension coil’s pound-per-inch results are not statistically different from the mean population results of 1,500 pounds per inch.
+
+Design your own study
+Upper management is looking for your expertise and wants you to design a study that compares the performance of the MechaCar prototype 
+vehicle to other comparable vehicles on the market.
+
+- Think critically about what metrics you would think would be of interest to a consumer (cost, fuel efficiency, color options, etc.). 
+- Determine what question we would ask, what the null and alternative hypothesis would be to answer that question, and what statistical test could be used to test this hypothesis. 
+- Knowing what test should be used, what data should be collected
+
+Big data and acquiring data and analyzing that data is very important for manufacturing growth.
+The amount and quantity of units that are sold monthly, quarterly and annually are some of the metrics that are obtained and most importantly, 
+customer satisfaction produced by surveys of the products sold.
+Gathering, collecting and analyzing data is a very good way to determine the measure of your product.
+
+Observations:
+What metrics you would think would be of interest to a consumer (cost, fuel efficiency, color options, etc.).
+I would choose fuel efficiency because it is very import to determine you weekly fuel budget and how much you are going to spend on fuel.
+A lot more of consumers are steering towards hybrid and/or electric vehicle to offset the cost of the amount of money they pay at the pumps
+
+Observations:
+Determine what question we would ask, what the null and alternative hypothesis would be to answer that question, and what statistical 
+test could be used to test this hypothesis
+A Boxplot can be used for this analysis because the amount of information contained within a single visualization, as well as the boxplot’s ability 
+to compare measurements across grouping factors. To generate a boxplot in ggplot2, we must supply numeric vector assigned to the y-value. 
+This is due to the ggplot accounting for multiple boxplots in a single figure.
+
+Rate of growth:
+The data is available to see the trend and growth rate of hybrid and electric vehicles. 
+From data given by car manufactures it was determined that the reduced cost of hybrid/electric vehicle had a profound impact on the growth rate of 
+purchase electric/hybrid vehicles. State and Government tax credits and or refunds also help to reduce production costs of building a new electric vehicle.
+
+Observations:
+Knowing what test should be used, what data should be collected?
+The two-sample t-test will be used to compare two samples from a single population dataset. We would perform a two-sample t-test 
+on the hybrid/electric vehicle vs the gasoline/diesel vehicle. 
