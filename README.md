@@ -21,3 +21,11 @@ Throughout the module, you’ll extract, transform, and load (ETL) data; visuali
 - Calculate summary statistics for quantitative variables.
 - Perform a t-test in R and provide interpretation of results.
 - Design your own statistical study to compare vehicle performance of two vehicles. 
+
+
+## Background
+## Project Overview
+## Resources
+## Data Source
+## Machine Learning Model
+## Findings and Recommendation
