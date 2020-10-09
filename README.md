@@ -1,3 +1,5 @@
+<img src="pic.jpg" alt="drawing" width="300"/>
+
 # R_Analysis
 ## Project Summary
 -In this module, you’ll apply your understanding of statistics and hypothesis testing to analyze a series of datasets from the automotive     industry
